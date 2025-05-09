@@ -1,0 +1,19 @@
+// Solicita permisos para notificaciones
+if(Notificacion.permission != 'granted'){
+  Notification.requestPermission();
+}
+
+function notificarSesionPorExpirar(){
+  if(Notification.permission === 'grantend'){
+    new Notification('Tu sesión está por expirar',{
+      body: 'Tienes un minuto para regresar al formulario de registro de actividades cdm',
+      // Se coloca la ruta absoluta assets/img/logo.ico assets/js/alerta.js
+      icon: 'assets/img/logo.ico' 
+    });
+  }
+
+  // Lanza la alerta
+  setTimeout(() => {
+    mostrarAlerta();
+  }, 
+}
